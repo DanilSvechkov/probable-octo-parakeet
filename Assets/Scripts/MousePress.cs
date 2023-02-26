@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class MousePress : MonoBehaviour
 {
+    private SpriteRenderer spriteObj; 
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        spriteObj = GetComponent<SpriteRenderer>(); 
     }
 
 
@@ -18,6 +20,8 @@ public class MousePress : MonoBehaviour
         if(Input.GetMouseButtonDown(0))
         {
             Debug.Log("Pressed");
+
+            spriteObj.enabled = !spriteObj.enabled; 
         }
         
     }
